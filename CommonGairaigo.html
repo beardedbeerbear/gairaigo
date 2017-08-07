@@ -1,0 +1,130 @@
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<title>Common Gairaigo Quiz!</title>
+
+<script type="text/javascript">
+	var words = [{key:"アクセス",value:"access"},{key:"アドレス",value:"address"},{key:"アドバイス",value:"advice"},{key:"エアー",value:"air"},{key:"エアコン",value:"air conditioner"},{key:"アルバム",value:"album"},{key:"アレルギー",value:"allergy"},{key:"アナログ",value:"analog"},{key:"アンド",value:"and"},{key:"アニメ",value:"anime"},{key:"アンサー",value:"answer"},{key:"アパート",value:"apartment"},{key:"エリア",value:"area"},{key:"オークション",value:"auction"},{key:"ベビー",value:"baby"},{key:"バック",value:"back"},{key:"バランス",value:"balance"},{key:"ボール",value:"ball"},{key:"バンド",value:"band"},{key:"バンク",value:"bank"},{key:"バー",value:"bar"},{key:"バリア",value:"barrier"},{key:"ベース",value:"base"},{key:"バッテリー",value:"battery"},{key:"ベッド",value:"bed"},{key:"ビール",value:"beer"},{key:"ベスト",value:"best"},{key:"バイク",value:"bike"},{key:"バイオマス",value:"biomass"},{key:"ブロック",value:"block"},{key:"ブルー",value:"blue"},{key:"ボーナス",value:"bonus"},{key:"ボックス",value:"box"},{key:"ブランド",value:"brand"},{key:"バブル",value:"bubble"},{key:"ビル",value:"building"},{key:"バス",value:"bus"},{key:"ビジネス",value:"business"},{key:"ボタン",value:"button"},{key:"バイ",value:"by"},{key:"ケーブル",value:"cable"},{key:"ケーキ",value:"cake"},{key:"カロリー",value:"calorie"},{key:"カメラ",value:"camera"},{key:"キャンセル",value:"cancel"},{key:"カー",value:"car"},{key:"カード",value:"card"},{key:"ケア",value:"care"},{key:"ケース",value:"case"},{key:"カテゴリー",value:"category"},{key:"セル",value:"cell"},{key:"センター",value:"center"},{key:"センチ",value:"centimeter"},{key:"センチメートル",value:"centimeter"},{key:"チャンス",value:"chance"},{key:"チャンネル",value:"channel"},{key:"キャラ",value:"character"},{key:"チャリティー",value:"charity"},{key:"チェック",value:"check"},{key:"チーズ",value:"cheese"},{key:"クリスマス",value:"Christmas"},{key:"クレーム",value:"claim"},{key:"クラス",value:"class"},{key:"クリア",value:"clear"},{key:"クリック",value:"click"},{key:"クラブ",value:"club"},{key:"コード",value:"code"},{key:"コーヒー",value:"coffee"},{key:"カラー",value:"color"},{key:"コメント",value:"comment"},{key:"コミュニケーション",value:"communication"},{key:"コミュニティー",value:"community"},{key:"コンピューター",value:"computer"},{key:"コンクリート",value:"concrete"},{key:"コンテンツ",value:"contents"},{key:"コントロール",value:"control"},{key:"コンビニ",value:"convenience store"},{key:"コピー",value:"copy"},{key:"コスト",value:"cost"},{key:"コース",value:"course"},{key:"カバー",value:"cover"},{key:"クリーム",value:"cream"},{key:"クレジット",value:"credit"},{key:"カップ",value:"cup"},{key:"カレー",value:"curry"},{key:"カット",value:"cut"},{key:"サイクル",value:"cycle"},{key:"データ",value:"data"},{key:"データーベース",value:"database"},{key:"デート",value:"date"},{key:"デー",value:"day"},{key:"ディーラー",value:"dealer"},{key:"デフレ",value:"deflation"},{key:"デザイン",value:"design"},{key:"デスクトップ",value:"desktop"},{key:"ディテール",value:"detail"},{key:"ダイエット",value:"diet"},{key:"デジタル",value:"digital"},{key:"デジカメ",value:"digital camera"},{key:"ディスク",value:"disk"},{key:"ドル",value:"dollar"},{key:"ドア",value:"door"},{key:"ダウン",value:"down"},{key:"ダウンロード",value:"download"},{key:"ドラマ",value:"drama"},{key:"ドライブ",value:"drive"},{key:"ドライバー",value:"driver"},{key:"エイト",value:"eight"},{key:"エネルギー",value:"energy"},{key:"エンジン",value:"engine"},{key:"エラー",value:"error"},{key:"イベント",value:"event"},{key:"エクセル",value:"excel"},{key:"ファン",value:"fan"},{key:"ファイル",value:"file"},{key:"ファースト",value:"first"},{key:"フロー",value:"flow"},{key:"フォルダー",value:"folder"},{key:"フォーラム",value:"forum"},{key:"フリー",value:"free"},{key:"フル",value:"full"},{key:"ゲーム",value:"game"},{key:"ガス",value:"gas"},{key:"ガソリン",value:"gasoline"},{key:"ガラス",value:"glass"},{key:"グローバル",value:"global"},{key:"グラム",value:"gram"},{key:"グリーン",value:"green"},{key:"グループ",value:"group"},{key:"ガイド",value:"guide"},{key:"ガイドライン",value:"guideline"},{key:"ギター",value:"guitar"},{key:"ゴム",value:"gum"},{key:"ハード",value:"hard"},{key:"ヘクタール",value:"hectare"},{key:"ヘリコプター",value:"helicopter"},{key:"ハイ",value:"high"},{key:"ハイテク",value:"high-tech"},{key:"ホーム",value:"home"},{key:"ホルモン",value:"hormone"},{key:"ホテル",value:"hotel"},{key:"ハウス",value:"house"},{key:"イメージ",value:"image"},{key:"イン",value:"in"},{key:"インフラ",value:"infrastructure"},{key:"イニシアチブ",value:"initiative"},{key:"インストール",value:"install"},{key:"インターネット",value:"internet"},{key:"イオン",value:"ion"},{key:"イスラム",value:"Islam"},{key:"キー",value:"key"},{key:"キロ",value:"kilo"},{key:"キログラム",value:"kilogram"},{key:"キロメートル",value:"kilometer"},{key:"キス",value:"kiss"},{key:"ノウハウ",value:"knowhow"},{key:"ランド",value:"land"},{key:"リーグ",value:"league"},{key:"レベル",value:"level"},{key:"ライセンス",value:"license"},{key:"ライフ",value:"life"},{key:"ライン",value:"line"},{key:"リンク",value:"link"},{key:"リスト",value:"list"},{key:"リテラシー",value:"literacy"},{key:"リチウム",value:"lithium"},{key:"ライブ",value:"live"},{key:"ローン",value:"loan"},{key:"ログ",value:"log"},{key:"ラブ",value:"love"},{key:"メール",value:"mail"},{key:"メーン",value:"main"},{key:"メーク",value:"make"},{key:"メーカー",value:"maker"},{key:"ママ",value:"mama"},{key:"マン",value:"man"},{key:"マネージメント",value:"management"},{key:"マナー",value:"manner"},{key:"マンション",value:"mansion"},{key:"マニュアル",value:"manual"},{key:"マップ",value:"map"},{key:"マーク",value:"mark"},{key:"マス",value:"mass"},{key:"ミーe",value:"me"},{key:"メディア",value:"media"},{key:"メガバイト",value:"mega bite"},{key:"メンバー",value:"member"},{key:"メモリー",value:"memory"},{key:"メニュー",value:"menu"},{key:"メリット",value:"merit"},{key:"メッセージ",value:"message"},{key:"メートル",value:"meter"},{key:"ミルク",value:"milk"},{key:"ミニ",value:"mini"},{key:"マイナス",value:"minus"},{key:"ミサイル",value:"missile"},{key:"ミス",value:"mistake"},{key:"モード",value:"mode"},{key:"モデル",value:"model"},{key:"マウス",value:"mouse"},{key:"マイ",value:"my"},{key:"ニーズ",value:"needs"},{key:"ネット",value:"net"},{key:"ネットワーク",value:"network"},{key:"ニュー",value:"new"},{key:"ニュース",value:"news"},{key:"ノー",value:"no"},{key:"ノート",value:"note"},{key:"ナンバー",value:"number"},{key:"オブ",value:"of"},{key:"オフ",value:"off"},{key:"オフィス",value:"office"},{key:"オイル",value:"oil"},{key:"オーケー",value:"OK"},{key:"オン",value:"on"},{key:"ワン",value:"one"},{key:"オプション",value:"option"},{key:"オア",value:"or"},{key:"アウト",value:"out"},{key:"パック",value:"pack"},{key:"ページ",value:"page"},{key:"パンフレット",value:"pamphlet"},{key:"パンツ",value:"pants"},{key:"パート",value:"part"},{key:"パートナーシップ",value:"partnership"},{key:"パスワード",value:"password"},{key:"パトロール",value:"patrol"},{key:"パターン",value:"pattern"},{key:"ピーク",value:"peak"},{key:"パーセント",value:"percent"},{key:"パソコン",value:"personal computer"},{key:"ペット",value:"pet"},{key:"ピアノ",value:"piano"},{key:"プラン",value:"plan"},{key:"プラスチック",value:"plastic"},{key:"プレー",value:"play"},{key:"プレーヤー",value:"player"},{key:"プラス",value:"plus"},{key:"ポイント",value:"point"},{key:"パワー",value:"power"},{key:"プレゼント",value:"present"},{key:"プリンター",value:"printer"},{key:"プロ",value:"pro"},{key:"プロセス",value:"process"},{key:"プログラム",value:"program"},{key:"プロジェクト",value:"project"},{key:"プロバイダー",value:"provider"},{key:"クエスチョン",value:"question"},{key:"ラジオ",value:"radio"},{key:"レンジ",value:"range"},{key:"レシピ",value:"recipe"},{key:"リサイクル",value:"recycle"},{key:"リハビリテーション",value:"rehabilitation"},{key:"レンタル",value:"rental"},{key:"レストラン",value:"restaurant"},{key:"リンク",value:"rink"},{key:"リスク",value:"risk"},{key:"ロック",value:"rock"},{key:"ロケット",value:"rocket"},{key:"ルート",value:"route"},{key:"ルール",value:"rule"},{key:"サラダ",value:"salad"},{key:"ソース",value:"sauce"},{key:"シーン",value:"scene"},{key:"サイエンス",value:"science"},{key:"シール",value:"seal"},{key:"セキュリティー",value:"security"},{key:"セミナー",value:"seminar"},{key:"シリーズ",value:"series"},{key:"サーバー",value:"server"},{key:"サービス",value:"service"},{key:"セット",value:"set"},{key:"セックス",value:"sex"},{key:"シャンプー",value:"shampoo"},{key:"シェア",value:"share"},{key:"シート",value:"sheet"},{key:"シャツ",value:"shirt"},{key:"ショック",value:"shock"},{key:"ショップ",value:"shop"},{key:"ショー",value:"show"},{key:"サイト",value:"site"},{key:"サイズ",value:"size"},{key:"サッカー",value:"soccer"},{key:"ソフト",value:"soft"},{key:"スープ",value:"soup"},{key:"スピード",value:"speed"},{key:"スポーツ",value:"sports"},{key:"スタッフ",value:"staff"},{key:"スタート",value:"start"},{key:"ストック",value:"stock"},{key:"ストレス",value:"stress"},{key:"スタイル",value:"style"},{key:"スーツ",value:"suit"},{key:"サミット",value:"summit"},{key:"スーパー",value:"super"},{key:"シンポジウム",value:"symposium"},{key:"システム",value:"system"},{key:"タバコ",value:"Tabaco"},{key:"テーブル",value:"table"},{key:"タレント",value:"talent"},{key:"テープ",value:"tape"},{key:"チーム",value:"team"},{key:"テレビ",value:"television"},{key:"テレビジョン",value:"television"},{key:"テロ",value:"terrorism"},{key:"テスト",value:"test"},{key:"ザ",value:"the"},{key:"テーマ",value:"theme"},{key:"チケット",value:"ticket"},{key:"タイム",value:"time"},{key:"タイミング",value:"timing"},{key:"タイヤ",value:"tire"},{key:"タイトル",value:"title"},{key:"ツー",value:"to"},{key:"トイレ",value:"toilet"},{key:"トン",value:"ton"},{key:"ツール",value:"tool"},{key:"トップ",value:"top"},{key:"ツアー",value:"tour"},{key:"タオル",value:"towel"},{key:"トラブル",value:"trouble"},{key:"ツー",value:"two"},{key:"タイプ",value:"type"},{key:"アップ",value:"up"},{key:"ウラン",value:"uranium"},{key:"ユーザー",value:"user"},{key:"バージョン",value:"version"},{key:"ビデオ",value:"video"},{key:"ウイルス",value:"virus"},{key:"ビタミン",value:"vitamin"},{key:"ボランティア",value:"volunteer"},{key:"ウェブ",value:"web"},{key:"ウィン",value:"win"},{key:"ウインドー",value:"window"},{key:"ワイン",value:"wine"},{key:"ワード",value:"word"},{key:"ユー",value:"you"},{key:"ゼロ",value:"zero"}];
+	var currentWord = 'test';
+	var previousWord = 'test';
+	var index = 0;
+	var correct = 0;
+	var incorrect = 0;
+	$(document).ready(function()
+	{
+		//shuffle array
+		words = shuffleArray(words);
+		updateCurrentAndPreviousWord();
+		
+		$("#userInput").keypress(handleKeyPress)
+		
+		$("#correct").hide();
+		$("#incorrect").hide();
+	});
+	
+	function handleKeyPress(event)
+	{
+		if(event.key ==='Enter')
+		{
+			//check if user was correct
+			if($("#userInput").val() === currentWord.value)
+			{
+				correct++;
+				$("#incorrect").hide();
+				$("#correct").show();
+			}
+			else
+			{
+				incorrect++;
+				$("#correct").hide();
+				$("#incorrect").show();
+			}
+			
+			index++;
+			
+			updateCurrentAndPreviousWord();
+			
+			updateProgressBar();
+			
+			$("#userInput").val(null);
+		}
+	}
+	
+	
+	
+	function updateCurrentAndPreviousWord()
+	{
+		previousWord = currentWord;
+		currentWord = words[index];
+		$("#previousWord").text(previousWord.value);
+		$("#currentWord").text(currentWord.key);
+	}
+	
+	function updateProgressBar()
+	{
+		var correctPercent = Math.round((correct / (correct+incorrect))*100);
+		var incorrectPercent = Math.round((incorrect / (correct+incorrect))*100);
+		$("#correctProgressBar").css('width',correctPercent+'%');
+		$("#incorrectProgressBar").css('width',incorrectPercent+'%');
+		$("#correctProgressBarText").text(correctPercent+'%');
+		$("#incorrectProgressBarText").text(incorrectPercent+'%');
+	}
+	
+	function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+</script>
+
+</head>
+<body>
+<div class="row">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-primary" style="margin-top:10px;">
+            <div class="panel-heading">
+              <h3 id="currentWord" class="panel-title" style="text-align:center; font-size:300%;">Panel title</h3>
+            </div>
+            <div class="panel-body">
+				<div class="form-group row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">	
+						<input placeholder="Your Response" class="form-control" style="text-align:center;" type="textbox"  id="userInput"/>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+				
+				<div id="correct" class="alert alert-success" role="alert">
+					<strong>Correct!</strong>
+				</div>
+				
+				<div id="incorrect" class="alert alert-danger" role="alert">
+					<strong>Incorrect...</strong> <span id="previousWord">Previous Item</span>
+				</div>
+				
+				<div class="progress">
+					<div id="correctProgressBar" class="progress-bar progress-bar-success" style="width: 0%"><span id="correctProgressBarText"></span></div>
+					<div id="incorrectProgressBar" class="progress-bar progress-bar-danger" style="width: 0%"><span id="incorrectProgressBarText"></span></div>
+				  </div>
+            </div>
+          </div>
+	</div >
+	<div class="col-md-3">
+	</div>
+</div>
+
+</body>
+</html>
