@@ -32,7 +32,7 @@
 		if(event.key ==='Enter')
 		{
 			//check if user was correct
-			if($("#userInput").val() === currentWord.value)
+			if($("#userInput").val().toLowerCase() === currentWord.value.toLowerCase())
 			{
 				correct++;
 				$("#incorrect").hide();
